@@ -28,3 +28,4 @@ steps:
       pwd
         
       ls
+      cat secret.txt
