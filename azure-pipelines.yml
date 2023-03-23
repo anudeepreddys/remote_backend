@@ -33,4 +33,5 @@ steps:
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
-    command: 'plan'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/RemoteBackend'
