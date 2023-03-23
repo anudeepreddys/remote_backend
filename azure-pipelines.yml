@@ -26,6 +26,6 @@ steps:
       #touch az.conf
       #echo access_key=$(AZ_KEY1) >az.conf
       terraform init -backend-config="access_key=$(AZ_KEY)"
-      terraform apply
+      terraform apply --auto-approve
       #terraform plan -backend-config="access_key=$(AZ_KEY)"
       
