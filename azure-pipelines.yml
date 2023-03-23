@@ -23,7 +23,8 @@ steps:
         
       ls
       cd RemoteBackend
-      touch az.conf
-      echo access_key=$(AZ_KEY1) >az.conf
-      terraform init --backend-config=az.conf
+      #touch az.conf
+      #echo access_key=$(AZ_KEY1) >az.conf
+      terraform init -backend-config="access_key=$(AZ_KEY1)"
       terraform plan
+      
