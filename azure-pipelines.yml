@@ -11,13 +11,13 @@ pool:
 
 steps:
 - script: |
-  sudo apt update
-  sudo apt install unzip
-  wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm64.zip
-  unzip terraform_1.4.2_linux_arm64.zip
-  sudo cp terraform /usr/local/bin/
-  terraform --version
+  echo sudo apt update
+  echo sudo apt install unzip
+  echo wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm64.zip
+  echo unzip terraform_1.4.2_linux_arm64.zip
+  echo sudo cp terraform /usr/local/bin/
+  echo terraform --version
   echo $(az_key)
   echo $(az_key) >secret.text
-  cat secret.txt
+  echo cat secret.txt
   displayName: 'installing TF'
