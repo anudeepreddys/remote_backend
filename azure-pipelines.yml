@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
 - task: CmdLine@2
   inputs:
     script: |
