@@ -16,6 +16,8 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    echo $(az_key)> secret.txt
+    echo cat secret.txt
   displayName: 'Run a multi-line script'
 - task: TerraformInstaller@1
   inputs:
