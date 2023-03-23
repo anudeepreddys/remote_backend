@@ -28,4 +28,6 @@ steps:
       pwd
         
       ls
-      cat secret.txt
+      cd RemoteBackend
+      terraform init
+      terraform plan
