@@ -9,15 +9,19 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: |
-  echo sudo apt update
-  echo sudo apt install unzip
-  echo wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm64.zip
-  echo unzip terraform_1.4.2_linux_arm64.zip
-  echo sudo cp terraform /usr/local/bin/
-  echo terraform --version
-  echo $(az_key)
-  echo $(az_key) >secret.text
-  echo cat secret.txt
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
+      echo sudo apt install unzip
+      echo wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_arm64.zip
+      echo unzip terraform_1.4.2_linux_arm64.zip
+      echo sudo cp terraform /usr/local/bin/
+      echo terraform --version
+      echo $(az_key)
+      echo $(az_key) >secret.text
+      echo cat secret.txt
+  
   displayName: 'installing TF'
