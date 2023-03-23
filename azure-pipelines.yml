@@ -29,5 +29,5 @@ steps:
         
       ls
       cd RemoteBackend
-      terraform init
+      terraform init -backend-config="access_key=$az_key"
       terraform plan
